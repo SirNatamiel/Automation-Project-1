@@ -129,6 +129,7 @@ describe('Section 2: Visual tests', () => {
     it('Check that logo is correct and has correct size', () => {
         cy.log('Will check logo source and size')
         cy.get('img').should('have.attr', 'src').should('include', 'cerebrum_hub_logo')
+
         // get element and check its parameter height
         // it should be less than 178 and greater than 100
         cy.get('img').invoke('height').should('be.lessThan', 178)
